@@ -1,46 +1,199 @@
-<!-- Foto Profil -->
-<p align="center">
-  <img src="https://raw.githubusercontent.com/USERNAME/USERNAME/main/profile.jpg" 
-       alt="Foto Profil" width="200" style="border-radius: 50%;">
-</p>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Saya - USERNAME</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* CSS Dasar */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1a1a2e; /* Warna latar belakang gelap */
+            color: #e4e4f0; /* Warna teks terang */
+            line-height: 1.6;
+        }
 
-<h1 align="center">Hi 👋, Saya USERNAME</h1>
-<h3 align="center">✨ Backend / Frontend Developer ✨</h3>
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+        }
 
----
+        /* Header dan Perkenalan */
+        .profile-header {
+            text-align: center;
+            padding: 40px 0;
+            background: #272741;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
 
-## 🔥 Tentang Saya
-- 🌱 Sedang belajar **JavaScript, Node.js, React**
-- 👨‍💻 Portfolio: https://USERNAME.github.io/
-- 📫 Kontak: **youremail@example.com**
-- ⚡ Fun fact: Saya suka ngoding sambil ngopi ☕  
+        .profile-img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #00aaff;
+            box-shadow: 0 0 15px rgba(0, 170, 255, 0.6);
+            margin-bottom: 20px;
+        }
 
----
+        .profile-header h1 {
+            color: #00aaff;
+            margin-bottom: 5px;
+        }
 
-## 🚀 Teknologi yang Saya Gunakan
-<p>
-  <img src="https://skillicons.dev/icons?i=js,ts,nodejs,react,html,css,git,github" />
-</p>
+        .profile-header h3 {
+            color: #c7c7d7;
+            font-weight: 400;
+        }
 
----
+        /* Bagian Konten (Tentang, Teknologi, Kontak) */
+        .section {
+            background-color: #272741;
+            padding: 30px;
+            margin-bottom: 20px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
 
-## 📊 GitHub Stats
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=USERNAME&show_icons=true&theme=tokyonight" alt="stats" />
-</p>
+        .section h2 {
+            color: #ffcc00; /* Warna kuning untuk judul */
+            border-bottom: 3px solid #ffcc00;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
 
-<p align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=USERNAME&theme=tokyonight" />
-</p>
+        /* Teknologi */
+        .tech-icons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            padding: 10px 0;
+        }
 
----
+        .tech-icons img {
+            width: 50px; /* Ukuran ikon teknologi */
+            transition: transform 0.3s ease-in-out;
+        }
 
-## 🖼️ Foto Profil (Letakkan File)
-Kamu cukup upload file gambar (misal: `profile.jpg`) di repository ini.  
-Lalu Markdown-nya otomatis memakai foto tersebut.
+        .tech-icons img:hover {
+            transform: scale(1.15); /* Efek zoom saat di-hover */
+        }
 
----
+        /* Sosial Media */
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
 
-## 🌐 Sosial Media
-- Instagram: https://instagram.com/USERNAME  
-- LinkedIn : https://linkedin.com/in/USERNAME  
+        .social-links a {
+            text-decoration: none;
+            color: #e4e4f0;
+            background-color: #00aaff;
+            padding: 10px 20px;
+            border-radius: 8px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            font-weight: 600;
+        }
+
+        .social-links a:hover {
+            background-color: #0088cc;
+            transform: translateY(-3px);
+        }
+
+        /* Statistik (Jika Ingin Tetap Ada) */
+        .github-stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* Membagi dua kolom untuk statistik */
+            gap: 20px;
+            justify-items: center;
+            margin-top: 20px;
+        }
+
+        .github-stats img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Responsif Sederhana */
+        @media (max-width: 600px) {
+            .container {
+                margin: 20px;
+                padding: 10px;
+            }
+            .github-stats {
+                grid-template-columns: 1fr; /* Stat bertumpuk di layar kecil */
+            }
+            .profile-header {
+                padding: 20px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    
+    <header class="profile-header">
+        <img src="./profile.jpg" alt="Foto Profil USERNAME" class="profile-img">
+        <h1>Halo 👋, Saya **USERNAME**</h1>
+        <h3>✨ Backend / Frontend Developer | Fullstack Enthusiast ✨</h3>
+    </header>
+
+    <div class="section">
+        <h2>🔥 Tentang Saya</h2>
+        <ul>
+            <li>🌱 Sedang aktif belajar dan mendalami: <strong>JavaScript, Node.js, dan React</strong></li>
+            <li>👨‍💻 Kunjungi Portfolio Saya: <a href="https://USERNAME.github.io/" target="_blank">USERNAME.github.io</a></li>
+            <li>📫 Kontak Cepat: <strong>youremail@example.com</strong></li>
+            <li>⚡ Fakta Menarik: Saya suka ngoding sambil ngopi ☕</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>🛠️ Teknologi Pilihan</h2>
+        <div class="tech-icons">
+            <img src="https://skillicons.dev/icons?i=js" alt="JavaScript">
+            <img src="https://skillicons.dev/icons?i=ts" alt="TypeScript">
+            <img src="https://skillicons.dev/icons?i=nodejs" alt="Node.js">
+            <img src="https://skillicons.dev/icons?i=react" alt="React">
+            <img src="https://skillicons.dev/icons?i=html" alt="HTML5">
+            <img src="https://skillicons.dev/icons?i=css" alt="CSS3">
+            <img src="https://skillicons.dev/icons?i=tailwind" alt="Tailwind CSS">
+            <img src="https://skillicons.dev/icons?i=git" alt="Git">
+            <img src="https://skillicons.dev/icons?i=github" alt="GitHub">
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>📈 Statistik GitHub</h2>
+        <p style="text-align: center; color: #c7c7d7;">Anda bisa melihat aktivitas ngoding saya di bawah ini:</p>
+        <div class="github-stats">
+            <img src="https://github-readme-stats.vercel.app/api?username=USERNAME&show_icons=true&theme=vue-dark&hide_border=true&count_private=true" alt="GitHub Stats">
+            <img src="https://github-readme-streak-stats.herokuapp.com/?user=USERNAME&theme=vue-dark&hide_border=true" alt="GitHub Streak">
+        </div>
+    </div>
+
+    <div class="section" style="text-align: center;">
+        <h2>🔗 Hubungi Saya</h2>
+        <div class="social-links">
+            <a href="https://instagram.com/USERNAME" target="_blank">Instagram</a>
+            <a href="https://linkedin.com/in/USERNAME" target="_blank">LinkedIn</a>
+            <a href="mailto:youremail@example.com">Email</a>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
