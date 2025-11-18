@@ -3,197 +3,126 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profil Saya - FATIME</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <title>Profil Saya - Fatimah Nur Aisyah</title>
+    <!-- Memuat Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
     <style>
-        /* CSS Dasar */
+        /* Menggunakan font Inter secara default */
         body {
-            font-family: 'Poppins', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #FF69B4 /* pink */
-            color: #e4e4f0; /* Warna teks terang */
-            line-height: 1.6;
+            font-family: 'Inter', sans-serif;
+            background-color: #0d1117; /* Warna background khas GitHub dark */
         }
-
-        .container {
-            max-width: 900px;
-            margin: 40px auto;
-            padding: 20px;
-        }
-
-        /* Header dan Perkenalan */
-        .profile-header {
-            text-align: center;
-            padding: 40px 0;
-            background: #272741;
-            border-radius: 15px;
-            margin-bottom: 30px;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-        }
-
-        .profile-img {
-            width: 180px;
-            height: 180px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 5px solid #00aaff;
-            box-shadow: 0 0 15px rgba(0, 170, 255, 0.6);
-            margin-bottom: 20px;
-        }
-
-        .profile-header h1 {
-            color: #00aaff;
-            margin-bottom: 5px;
-        }
-
-        .profile-header h3 {
-            color: #c7c7d7;
-            font-weight: 400;
-        }
-
-        /* Bagian Konten (Tentang, Teknologi, Kontak) */
-        .section {
-            background-color: #272741;
-            padding: 30px;
-            margin-bottom: 20px;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        .section h2 {
-            color: #ffcc00; /* Warna kuning untuk judul */
-            border-bottom: 3px solid #ffcc00;
-            padding-bottom: 10px;
-            margin-bottom: 20px;
-        }
-
-        /* Teknologi */
-        .tech-icons {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: center;
-            padding: 10px 0;
-        }
-
-        .tech-icons img {
-            width: 50px; /* Ukuran ikon teknologi */
+        /* Style untuk ikon sosial media */
+        .social-icon-wrapper {
             transition: transform 0.3s ease-in-out;
         }
-
-        .tech-icons img:hover {
-            transform: scale(1.15); /* Efek zoom saat di-hover */
-        }
-
-        /* Sosial Media */
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin-top: 20px;
-        }
-
-        .social-links a {
-            text-decoration: none;
-            color: #e4e4f0;
-            background-color: #00aaff;
-            padding: 10px 20px;
-            border-radius: 8px;
-            transition: background-color 0.3s ease, transform 0.3s ease;
-            font-weight: 600;
-        }
-
-        .social-links a:hover {
-            background-color: #0088cc;
-            transform: translateY(-3px);
-        }
-
-        /* Statistik (Jika Ingin Tetap Ada) */
-        .github-stats {
-            display: grid;
-            grid-template-columns: 1fr 1fr; /* Membagi dua kolom untuk statistik */
-            gap: 20px;
-            justify-items: center;
-            margin-top: 20px;
-        }
-
-        .github-stats img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-        }
-
-        /* Responsif Sederhana */
-        @media (max-width: 600px) {
-            .container {
-                margin: 20px;
-                padding: 10px;
-            }
-            .github-stats {
-                grid-template-columns: 1fr; /* Stat bertumpuk di layar kecil */
-            }
-            .profile-header {
-                padding: 20px 0;
-            }
+        .social-icon-wrapper:hover {
+            transform: scale(1.1);
         }
     </style>
 </head>
-<body>
+<body class="text-gray-200">
 
-<div class="container">
+<div class="container mx-auto p-4 md:p-8 max-w-4xl">
     
-    <header class="profile-header">
-        <img src="./profile.png" alt="Foto Profil" class="profile-img">
-        <h1>Halo 👋, Saya fatimah Nur Aisyah </h1>
-        <h3>✨ Backend / Frontend Developer | Fullstack Enthusiast ✨</h3>
+    <!-- HEADER PROFIL -->
+    <header class="bg-gray-800 p-8 rounded-xl shadow-2xl mb-8 border border-gray-700">
+        <div class="text-center">
+            <!-- Ganti URL ini dengan foto profil Anda -->
+            <img 
+                src="https://placehold.co/180x180/1f2937/ffffff?text=FATIME" 
+                alt="Foto Profil Fatime" 
+                class="w-36 h-36 rounded-full mx-auto ring-4 ring-blue-500 mb-4 object-cover"
+                onerror="this.src='https://placehold.co/180x180/1f2937/ffffff?text=FATIME';"
+            >
+            <h1 class="text-4xl font-extrabold text-blue-400 mb-1">Halo 👋, Saya Fatimah Nur Aisyah</h1>
+            <h3 class="text-xl font-medium text-gray-400 mb-4">✨ Backend / Frontend Developer | Fullstack Enthusiast ✨</h3>
+        </div>
+
+        <!-- Tautan Sosial Media Utama -->
+        <div class="flex flex-wrap justify-center gap-4 mt-6">
+            
+            <!-- Link Facebook -->
+            <a href="https://www.facebook.com/<GANTI_DENGAN_ID_FACEBOOK_ANDA>" target="_blank" class="social-icon-wrapper p-3 bg-blue-600 hover:bg-blue-700 rounded-full shadow-lg flex items-center">
+                <img src="https://skillicons.dev/icons?i=facebook" alt="Facebook" class="w-6 h-6">
+            </a>
+
+            <!-- Link WhatsApp (Wajib diganti dengan nomor Anda) -->
+            <a href="https://wa.me/62<GANTI_DENGAN_NOMOR_WA_ANDA>" target="_blank" class="social-icon-wrapper p-3 bg-green-500 hover:bg-green-600 rounded-full shadow-lg flex items-center">
+                <img src="https://skillicons.dev/icons?i=whatsapp" alt="WhatsApp" class="w-6 h-6">
+            </a>
+
+            <!-- Link Instagram (Wajib diganti dengan username Anda) -->
+            <a href="https://instagram.com/<GANTI_DENGAN_USERNAME_IG_ANDA>" target="_blank" class="social-icon-wrapper p-3 bg-pink-500 hover:bg-pink-600 rounded-full shadow-lg flex items-center">
+                <img src="https://skillicons.dev/icons?i=instagram" alt="Instagram" class="w-6 h-6">
+            </a>
+
+            <!-- Link LinkedIn -->
+            <a href="https://linkedin.com/in/<GANTI_DENGAN_ID_LINKEDIN_ANDA>" target="_blank" class="social-icon-wrapper p-3 bg-blue-700 hover:bg-blue-800 rounded-full shadow-lg flex items-center">
+                <img src="https://skillicons.dev/icons?i=linkedin" alt="LinkedIn" class="w-6 h-6">
+            </a>
+            
+        </div>
     </header>
 
-    <div class="section">
-        <h2>🔥 Tentang Saya</h2>
-        <ul>
-            <li>🌱 Sedang aktif belajar dan mendalami: <strong>JavaScript, Node.js, dan React</strong></li>
-            <li>👨‍💻 Kunjungi Portfolio Saya: <a href="https://USERNAME.github.io/" target="_blank">USERNAME.github.io</a></li>
-            <li>📫 Kontak Cepat: <strong>youremail@example.com</strong></li>
+    <!-- TENTANG SAYA -->
+    <section class="bg-gray-800 p-6 md:p-8 rounded-xl shadow-lg mb-8 border border-gray-700">
+        <h2 class="text-2xl font-bold text-yellow-400 border-b-2 border-yellow-400 pb-2 mb-4">🔥 Tentang Saya</h2>
+        <ul class="space-y-3 list-disc list-inside text-lg">
+            <li>🌱 Sedang aktif belajar dan mendalami: 
+                <strong class="text-green-300">JavaScript, Node.js, dan React</strong>
+            </li>
+            <li>👨‍💻 Kunjungi Portfolio Saya: 
+                <a href="https://<GANTI_DENGAN_USERNAME_GITHUB>.github.io/" target="_blank" class="text-blue-400 hover:underline">
+                    <GANTI_DENGAN_USERNAME_GITHUB>.github.io
+                </a>
+            </li>
+            <li>📫 Kontak Cepat (Email): 
+                <a href="mailto:<GANTI_DENGAN_EMAIL_ANDA>" class="text-blue-400 hover:underline">
+                    <GANTI_DENGAN_EMAIL_ANDA>
+                </a>
+            </li>
+            <li>📍 Lokasi: <strong>Indonesia</strong></li>
             <li>⚡ Fakta Menarik: Saya suka ngoding sambil ngopi ☕</li>
         </ul>
-    </div>
+    </section>
 
-    <div class="section">
-        <h2>🛠️ Teknologi Pilihan</h2>
-        <div class="tech-icons">
-            <a href="https://wa.me/NOMORANDA" target="_blank" title="WhatsApp">
-        <img src="https://skillicons.dev/icons?i=whatsapp" alt="WhatsApp">
-    </a>
-    
-    <a href="https://instagram.com/USERNAME" target="_blank" title="Instagram">
-        <img src="https://skillicons.dev/icons?i=instagram" alt="Instagram">
-    </a>
-    
-    <a href="https://www.facebook.com/IDANDA" target="_blank" title="Facebook">
-        <img src="https://skillicons.dev/icons?i=facebook" alt="Facebook">
-    </a>
+    <!-- TEKNOLOGI PILIHAN -->
+    <section class="bg-gray-800 p-6 md:p-8 rounded-xl shadow-lg mb-8 border border-gray-700">
+        <h2 class="text-2xl font-bold text-yellow-400 border-b-2 border-yellow-400 pb-2 mb-4">🛠️ Teknologi Pilihan</h2>
+        <div class="flex flex-wrap justify-center gap-6 mt-6">
+            <!-- Tambahkan ikon teknologi lain yang Anda kuasai di sini -->
+            <div class="social-icon-wrapper"><img src="https://skillicons.dev/icons?i=html,css,js" alt="HTML, CSS, JavaScript" class="w-12 h-12"></div>
+            <div class="social-icon-wrapper"><img src="https://skillicons.dev/icons?i=react,nextjs,tailwind" alt="React, Next.js, Tailwind" class="w-12 h-12"></div>
+            <div class="social-icon-wrapper"><img src="https://skillicons.dev/icons?i=nodejs,express,mongodb" alt="Node.js, Express, MongoDB" class="w-12 h-12"></div>
+            <div class="social-icon-wrapper"><img src="https://skillicons.dev/icons?i=git,github,vscode" alt="Git, GitHub, VS Code" class="w-12 h-12"></div>
         </div>
-    </div>
+    </section>
 
-    <div class="section">
-        <h2>📈 Statistik GitHub</h2>
-        <p style="text-align: center; color: #c7c7d7;">Anda bisa melihat aktivitas ngoding saya di bawah ini:</p>
-        <div class="github-stats">
-            <img src="https://github-readme-stats.vercel.app/api?username=USERNAME&show_icons=true&theme=vue-dark&hide_border=true&count_private=true" alt="GitHub Stats">
-            <img src="https://github-readme-streak-stats.herokuapp.com/?user=USERNAME&theme=vue-dark&hide_border=true" alt="GitHub Streak">
+    <!-- STATISTIK GITHUB -->
+    <section class="bg-gray-800 p-6 md:p-8 rounded-xl shadow-lg mb-8 border border-gray-700">
+        <h2 class="text-2xl font-bold text-yellow-400 border-b-2 border-yellow-400 pb-2 mb-4">📈 Statistik GitHub</h2>
+        <p class="text-center text-gray-400 mb-6">Aktivitas ngoding terbaru saya:</p>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 justify-items-center">
+            <!-- Ganti semua 'USERNAME' di bawah dengan Username GitHub Anda! -->
+            <img 
+                src="https://github-readme-stats.vercel.app/api?username=<GANTI_DENGAN_USERNAME_GITHUB>&show_icons=true&theme=dark&hide_border=true&count_private=true&title_color=3b82f6&icon_color=60a5fa&text_color=e5e7eb&bg_color=1f2937" 
+                alt="GitHub Stats" 
+                class="max-w-full h-auto rounded-lg shadow-xl"
+            >
+            <img 
+                src="https://github-readme-streak-stats.herokuapp.com/?user=<GANTI_DENGAN_USERNAME_GITHUB>&theme=dark&hide_border=true&ring=3b82f6&fire=ef4444&date_color=d1d5db&side_main=d1d5db&side_sec=9ca3af&stroke=1f2937&background=1f2937" 
+                alt="GitHub Streak" 
+                class="max-w-full h-auto rounded-lg shadow-xl"
+            >
         </div>
-    </div>
+    </section>
 
-    <div class="section" style="text-align: center;">
-        <h2>🔗 Hubungi Saya</h2>
-        <div class="social-links">
-            <a href="https://instagram.com/USERNAME" target="_blank">Instagram</a>
-            <a href="https://linkedin.com/in/USERNAME" target="_blank">LinkedIn</a>
-            <a href="mailto:youremail@example.com">Email</a>
-        </div>
-    </div>
+    <!-- PENUTUP -->
+    <footer class="text-center p-6 text-gray-500">
+        &copy; 2024 Fatimah Nur Aisyah. Dibuat dengan semangat koding.
+    </footer>
 
 </div>
 
